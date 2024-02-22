@@ -7,6 +7,7 @@ public class PlayerMove : MonoBehaviour
     private float inputH = 0;
     private float inputV = 0;
     public float speed = 10;
+    public float points = 0;
     public Rigidbody2D rb;
 
     // Start is called before the first frame update
