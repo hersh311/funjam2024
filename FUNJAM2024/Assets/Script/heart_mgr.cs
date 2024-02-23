@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class heart_mgr : MonoBehaviour
 {
     public GameObject h1;
@@ -19,6 +19,9 @@ public class heart_mgr : MonoBehaviour
     {
         switch (lives)
         {
+            case 0:
+                SceneManager.LoadScene(2);
+                break;
             case 1:
                 h1.SetActive(true);
                 h2.SetActive(false);

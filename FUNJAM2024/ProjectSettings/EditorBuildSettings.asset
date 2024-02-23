@@ -5,7 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+  - enabled: 0
+    path: Assets/City Pack/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 2d58d38369419c145a45bdb4df9b1edb
+  - enabled: 1
+    path: Assets/Scenes/NEW CUTIE TOWN.unity
+    guid: c3d0263aa250eaa41af4fc6a8d8aef33
+  - enabled: 1
+    path: Assets/Scenes/Lose.unity
+    guid: 44fd668451f4a564fa2ba7c05a8f3d6f
   m_configObjects: {}
