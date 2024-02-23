@@ -7,7 +7,7 @@ public class heart_mgr : MonoBehaviour
     public GameObject h1;
     public GameObject h2;
     public GameObject h3;
-    public static int lives = 3;
+    public int lives = 3;
     // Start is called before the first frame update
     void Start()
     {

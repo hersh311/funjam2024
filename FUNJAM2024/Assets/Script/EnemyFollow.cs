@@ -6,6 +6,7 @@ public class EnemyFollow : MonoBehaviour
 {
     GameObject player;
     AudioSource snarl;
+  
     public bool inRange = false;
     public bool inPath = true;
     public bool square = false;
@@ -36,7 +37,8 @@ public class EnemyFollow : MonoBehaviour
         player= GameObject.FindWithTag("Player");
         snarl = GetComponent<AudioSource>();
         
-        
+
+
     }
     
     void Update()
@@ -123,4 +125,5 @@ public class EnemyFollow : MonoBehaviour
             }
         }
     }
+    
 }

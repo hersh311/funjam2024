@@ -1122,6 +1122,7 @@ MonoBehaviour:
   h1: {fileID: 737222177}
   h2: {fileID: 1442858541}
   h3: {fileID: 2142935029}
+  lives: 3
 --- !u!1 &1442858541
 GameObject:
   m_ObjectHideFlags: 0
