@@ -21,7 +21,7 @@ public class kill_player : MonoBehaviour
         if (collision.tag == "Player")
         {
             hearts.GetComponent<heart_mgr>().lives -= 1;
-            collision.transform.position = new Vector3(-10, 0, -5);
+            collision.transform.position = new Vector3(-30, -40, -5);
         }
     }
 }
