@@ -18,6 +18,7 @@ public class EnemyFollow : MonoBehaviour
     public float step;
     public float counter=0;
     public float timerange = 10;
+    bool audio_on=false;
     Vector3 p1_p;
     Vector3 p2_p;
     Vector3 p3_p;
@@ -34,6 +35,7 @@ public class EnemyFollow : MonoBehaviour
         transform.position = p1_p;
         player= GameObject.FindWithTag("Player");
         snarl = GetComponent<AudioSource>();
+        
         
     }
     
@@ -102,7 +104,11 @@ public class EnemyFollow : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * speed);
             animator.SetBool("monster_mov", true);
-            snarl.Play();
+            if (!audio_on)
+            {
+                snarl.Play();
+                audio_on = true;
+            }
             inPath = false;
         }
         else if(!inPath && !inRange)
@@ -110,7 +116,10 @@ public class EnemyFollow : MonoBehaviour
             
             
             animator.SetBool("monster_mov", false);
-            snarl.Pause();
+            if (audio_on)
+            {
+                snarl.Pause();
+            }
         }
     }
 }
