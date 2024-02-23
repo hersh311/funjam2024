@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyFollow : MonoBehaviour
 {
     GameObject player;
+    AudioSource snarl;
     public bool inRange = false;
     public bool inPath = true;
     public bool square = false;
@@ -32,6 +33,8 @@ public class EnemyFollow : MonoBehaviour
         p4_p = p4.transform.position;
         transform.position = p1_p;
         player= GameObject.FindWithTag("Player");
+        snarl = GetComponent<AudioSource>();
+        
     }
     
     void Update()
@@ -99,11 +102,15 @@ public class EnemyFollow : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, player.transform.position, Time.deltaTime * speed);
             animator.SetBool("monster_mov", true);
+            snarl.Play();
             inPath = false;
         }
         else if(!inPath && !inRange)
         {
+            
+            
             animator.SetBool("monster_mov", false);
+            snarl.Pause();
         }
     }
 }
