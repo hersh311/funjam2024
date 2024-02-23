@@ -119,6 +119,7 @@ public class EnemyFollow : MonoBehaviour
             if (audio_on)
             {
                 snarl.Pause();
+                audio_on = false;
             }
         }
     }
