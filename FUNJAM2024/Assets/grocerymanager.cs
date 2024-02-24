@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class grocerymanager : MonoBehaviour
 {
-    public float groceryScore = 0;
-    public float groceryCount = 0;
+    public int groceryScore = 0;
+    public int groceryCount = 0;
+    public int req_groceries = 10;
 
 
     void Start()
@@ -17,6 +18,9 @@ public class grocerymanager : MonoBehaviour
 
     void Update()
     {
-        
+        if (req_groceries == groceryCount)
+        {
+            SceneManager.LoadScene(3);
+        }
     }
 }
