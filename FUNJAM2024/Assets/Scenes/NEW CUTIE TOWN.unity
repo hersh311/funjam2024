@@ -7695,7 +7695,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   groceryScore: 0
   groceryCount: 0
-  req_groceries: 1
+  req_groceries: 5
 --- !u!4 &590871914
 Transform:
   m_ObjectHideFlags: 0
